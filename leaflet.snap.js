@@ -323,6 +323,21 @@ L.Handler.MarkerSnap = L.Handler.extend({
     }
 });
 
+L.Edit = L.Edit || {};
+L.Edit.Poly = L.Edit.Poly || { extend: function () {} };
+L.Edit.PolyVerticesEdit = L.Edit.PolyVerticesEdit || { extend: function () {} };
+L.Edit.Rectangle = L.Edit.Rectangle || { extend: function () {} };
+L.Edit.Circle = L.Edit.Circle || { extend: function () {} };
+L.EditToolbar = L.EditToolbar || {};
+L.EditToolbar.Edit = L.EditToolbar.Edit || { extend: function () {} };
+L.EditToolbar.prototype = L.EditToolbar.prototype || { extend: function () {} };
+L.EditToolbar.prototype.getEditHandler = L.EditToolbar.prototype.getEditHandler || { extend: function () {} };
+L.Draw = L.Draw || {};
+L.Draw.Feature = L.Draw.Feature || {};
+L.Draw.Feature.SnapMixin = L.Draw.Feature.SnapMixin || {};
+L.Draw.Feature.include = function(){};
+L.Draw.Feature.addInitHook = function(){};
+
 L.Handler.PolylineSnap = L.Edit.Poly.extend({
     initialize: function (map, poly, options) {
         var that = this;
